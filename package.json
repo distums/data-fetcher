@@ -1,5 +1,5 @@
 {
-  "name": "data-fetcher",
+  "name": "@distums/data-fetcher",
   "version": "0.0.1",
   "description": "",
   "main": "src/DataFetcher.js",
