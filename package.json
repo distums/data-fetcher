@@ -1,12 +1,25 @@
 {
   "name": "data-fetcher",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/DataFetcher.js",
+  "files": [
+    "src/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "react"
+  ],
+  "author": "distums",
+  "repository": "https://github.com/distums/data-fetcher",
+  "bugs": "https://github.com/distums/data-fetcher/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "react-dom": "^16.4.0"
+  },
+  "dependencies": {
+    "react": "^16.4.0"
+  }
 }
