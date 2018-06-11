@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
+import identity from 'ramda/es/identity';
 
-const identity = data => data;
-
-export default function withDataFetcher({ reducer = identity, fetcher } = {}) {
+export default function withDataFetcher({
+  reducer = identity,
+  fetcher,
+  event,
+} = {}) {
   class DataFetcher extends Component {
     static propTypes = {
       children: PropTypes.func.isRequired,
-      event: PropTypes.object,
       params: PropTypes.any,
     };
 
@@ -16,7 +18,7 @@ export default function withDataFetcher({ reducer = identity, fetcher } = {}) {
       this.state = {
         data: null,
       };
-      this._unsubscribe = this.registerEvent(props.event);
+      this._unsubscribe = this.registerEvent();
     }
 
     componentDidMount() {
@@ -46,7 +48,7 @@ export default function withDataFetcher({ reducer = identity, fetcher } = {}) {
       );
     }
 
-    registerEvent(event) {
+    registerEvent() {
       return event ? event.subscribe(() => this.getData('0')) : null;
     }
 

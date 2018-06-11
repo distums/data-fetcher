@@ -17,9 +17,10 @@
   "bugs": "https://github.com/distums/data-fetcher/issues",
   "license": "MIT",
   "devDependencies": {
+    "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "react": "^16.4.0"
+    "ramda": "^0.25.0"
   }
 }
